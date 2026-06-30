@@ -1,5 +1,5 @@
-# 🔹 Paso 1: Usar una imagen oficial de Maven para compilar de forma nativa en la nube
-FROM maven:3.9.6-eclipse-temurin-17 AS build
+# 🔹 Paso 1: Usar una imagen oficial de Maven con Java 21 para compilar
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
 
 # Copiar el archivo de configuración del proyecto
@@ -12,8 +12,8 @@ RUN mvn dependency:go-offline -B
 COPY src ./src
 RUN mvn clean package -DskipTests
 
-# 🔹 Paso 2: Crear la imagen final de ejecución mucho más ligera
-FROM eclipse-temurin:17-jre-jammy
+# 🔹 Paso 2: Crear la imagen final de ejecución con Java 21 JRE
+FROM eclipse-temurin:21-jre-jammy
 WORKDIR /app
 
 # Copiar el .jar compilado del paso anterior
