@@ -9,13 +9,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import DigitalGroup.tienda_app.service.ICardService;
+
 
 @SpringBootApplication
 public class TiendaAppApplication implements CommandLineRunner{
 
 	@Autowired
-		private ICardService cardService;
+		
 		private static final Logger  logger =  LoggerFactory.getLogger(TiendaAppApplication.class);
 	public static void main(String[] args) {
 		
