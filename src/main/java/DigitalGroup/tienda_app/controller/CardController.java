@@ -12,7 +12,7 @@ import DigitalGroup.tienda_app.model.Card;
 import DigitalGroup.tienda_app.service.CardService;
 
 @RestController
-@RequestMapping("https://digitalgroup.onrender.com/api/cards")
+@RequestMapping("/api/cards")
 @CrossOrigin(origins =  "*")
 public class CardController {
     @Autowired

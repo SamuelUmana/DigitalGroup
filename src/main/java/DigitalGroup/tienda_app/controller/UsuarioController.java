@@ -37,7 +37,7 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioGuardado);
     }
 
-    @PutMapping("https://digitalgroup.onrender.com/configurar")
+    @PutMapping("/configurar")
     public ResponseEntity<?> configurarTienda(@RequestHeader("X-User-Id") String userId,
             @RequestBody Usuario datosTienda) {
         return usuarioRepository.findById(userId)
