@@ -28,14 +28,12 @@ public class CardService implements ICardService {
 
     @Override
     public void saveCard(Card card) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'saveCard'");
+        cardRepository.save(card);
     }
 
     @Override
     public void deleteCard(Card card) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteCard'");
+        cardRepository.delete(card);
     }
 
 }
